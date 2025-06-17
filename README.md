@@ -4,6 +4,7 @@ Features
 
 Meal Recommendations: Filter menu items by budget, dietary tags (e.g., vegan, lactose-free), and keywords (e.g., "frango", "salada").
 Fuzzy Matching: Uses fuzzywuzzy for robust query matching to handle synonyms and misspellings.
+Agent-Based Processing: Leverages langchain for advanced query processing and meal recommendations.
 Interactive UI: Provides a chat-like interface with quick suggestion buttons.
 Logging: Comprehensive debug logging for development and troubleshooting.
 Modular Design: Organized codebase with separate modules for configuration, utilities, agents, and API routes.
@@ -14,7 +15,19 @@ Clone the repository:git clone https://github.com/pedrowilian/Case_Trela.git
 cd Case_Trela
 
 
-Install dependencies:pip install -r requirements.txt
+Install Python dependencies using pip:
+pip install fastapi
+pip install uvicorn
+pip install openai-agents
+pip install langchain
+pip install python-dotenv
+pip install fuzzywuzzy
+pip install python-Levenshtein
+pip install pydantic
+pip install nest_asyncio pyngrok
+
+
+Alternatively, install all dependencies at once using the provided requirements.txt:pip install -r requirements.txt
 
 
 Set up the OpenAI API key:
@@ -25,9 +38,9 @@ Add your OpenAI API key (obtain one from OpenAI):OPENAI_API_KEY=your_openai_api_
 Ensure .env is not committed to version control (it’s excluded by .gitignore).
 
 
-Ensure menu.json is available at the path specified in src/config.py (default: C:\Users\23.01307-9\Documents\Trela_Final\menu.json). For portability, copy menu.json to the project root and update src/config.py to:MENU_PATH: Path = Path("menu.json")
+Ensure menu.json is available in the project root. Update src/config.py to use a relative path for portability:MENU_PATH: Path = Path("menu.json")
 
-
+Copy menu.json to the project root if it’s currently at C:\Users\23.01307-9\Documents\Trela_Final\menu.json.
 Run the application:python run.py
 
 
