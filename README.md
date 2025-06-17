@@ -1,31 +1,43 @@
-🥗 Trela — Healthy Meals Recommendation API
-Trela is a FastAPI-based web application that recommends healthy meals based on user preferences — including budget, dietary restrictions, and ingredients. It features a conversational UI and intelligent query processing using LangChain and fuzzy matching.
+# 🥗 Trela — Healthy Meals Recommendation API
 
-<div align="center"> <img src="https://img.shields.io/badge/FastAPI-API-green" /> <img src="https://img.shields.io/badge/LangChain-Agent-blue" /> <img src="https://img.shields.io/badge/TailwindCSS-UI-lightblue" /> <img src="https://img.shields.io/badge/License-MIT-yellow" /> </div>
-🚀 Features
-🍽 Meal Recommendations
-Filter meals by budget, keywords (e.g., "frango", "salada"), and dietary tags (e.g., vegan, lactose-free).
+**Trela** is a conversational AI-powered API built with **FastAPI** and powered by an **OpenAI agent** using **LangChain**. It recommends healthy meals based on natural language user input, supporting dietary preferences, ingredients, and budget constraints. The frontend features a modern, chat-like interface styled with **Tailwind CSS** and uses **Axios** for smooth interaction with the backend.
 
-🔍 Fuzzy Matching
-Uses fuzzywuzzy to handle synonyms and typos for more flexible querying.
+<div align="center">
+  <img src="https://img.shields.io/badge/FastAPI-API-green" />
+  <img src="https://img.shields.io/badge/OpenAI-Agent-purple" />
+  <img src="https://img.shields.io/badge/LangChain-Reasoning-blue" />
+  <img src="https://img.shields.io/badge/TailwindCSS-UI-lightblue" />
+</div>
 
-🧠 Agent-Based Reasoning
-Incorporates LangChain for natural language query parsing and intelligent meal suggestions.
+---
 
-💬 Interactive UI
-Chat-like frontend with quick-access suggestion buttons, styled with Tailwind CSS.
+## 🚀 Features
 
-📜 Logging
-Debug-level logging included for easier development and troubleshooting.
+- **🍽 Smart Meal Recommendations**  
+  Filter dishes by budget, ingredients, and dietary tags (e.g., `vegan`, `sem lactose`).
 
-🧱 Modular Architecture
-Clean, modular design with well-separated concerns: API, agents, utilities, and configuration.
+- **🤖 OpenAI Agent Reasoning**  
+  Leverages LangChain with OpenAI’s language models for interpreting natural language input and generating relevant results.
 
-⚙️ Installation
-1. Clone the Repository
-bash
-Copy
-Edit
+- **🔍 Fuzzy Matching**  
+  Uses `fuzzywuzzy` to tolerate typos and synonyms in user queries.
+
+- **💬 Interactive Chat UI**  
+  Chat-style frontend with quick-suggestion buttons for an intuitive experience.
+
+- **📜 Logging**  
+  Built-in debug logging to assist in development and monitoring.
+
+- **🧱 Modular Design**  
+  Organized codebase with clean separation of concerns (agents, routes, utils, UI, config).
+
+---
+
+## ⚙️ Installation
+
+### 1. Clone the Repository
+
+```bash
 git clone https://github.com/pedrowilian/Case_Trela.git
 cd Case_Trela
 2. Install Dependencies
@@ -34,36 +46,34 @@ bash
 Copy
 Edit
 pip install fastapi uvicorn openai-agents langchain python-dotenv fuzzywuzzy python-Levenshtein pydantic nest_asyncio pyngrok
-Option 2: Using requirements.txt
+Option 2: With requirements.txt
 bash
 Copy
 Edit
 pip install -r requirements.txt
-3. Configure API Key
+3. Add Your OpenAI API Key
 Create a .env file in the root directory:
 
 bash
 Copy
 Edit
 touch .env
-Add your OpenAI key:
+Add the following line to it:
 
 ini
 Copy
 Edit
 OPENAI_API_KEY=your_openai_api_key_here
-Ensure the .env file is excluded from version control (it's already listed in .gitignore).
+✅ .env is already listed in .gitignore and won’t be tracked by Git.
 
-4. Prepare Menu Data
-Ensure menu.json is in the project root.
-
-If not, copy it from your original location:
+4. Add Menu Data
+Ensure menu.json exists in the project root. If it's located elsewhere, copy it:
 
 bash
 Copy
 Edit
 cp /path/to/menu.json ./menu.json
-Update the path in src/config.py:
+Then, in src/config.py, ensure the path is set like this:
 
 python
 Copy
@@ -74,18 +84,18 @@ bash
 Copy
 Edit
 python run.py
-Then open your browser at http://localhost:8000
+Then open your browser and go to: http://localhost:8000
 
 💡 Usage
-In the UI, type natural language queries like:
+You can enter natural language queries into the frontend, such as:
 
 Prato vegano até R$40
 
 Salada com frango
 
-Algo sem lactose com peixe
+Refeição leve sem lactose
 
-The API routes the query to /recommend, processes it using LangChain and fuzzy matching, and returns a list of matching meals from menu.json.
+The query is processed by the /recommend route, interpreted by the OpenAI agent using LangChain, and returns matching meal options from menu.json.
 
 🗂 Project Structure
 bash
@@ -94,24 +104,22 @@ Edit
 Case_Trela/
 ├── src/
 │   ├── api/
-│   │   ├── app.py                # FastAPI application setup
+│   │   ├── app.py                # FastAPI app setup
 │   │   └── routes.py             # API endpoints
 │   ├── agents/
-│   │   └── meal_recommender.py   # LangChain agent logic
+│   │   └── meal_recommender.py   # OpenAI-based recommendation logic
 │   ├── utils/
-│   │   ├── menu_loader.py        # Menu loading and schema validation
-│   │   ├── budget_extractor.py   # Budget parsing from queries
-│   │   └── logger.py             # Logging setup
-│   ├── config.py                 # Global configuration
+│   │   ├── menu_loader.py        # Menu parsing and validation
+│   │   ├── budget_extractor.py   # Price extraction logic
+│   │   └── logger.py             # Logging configuration
+│   ├── config.py                 # Centralized settings
 │   └── static/
-│       ├── index.html            # Chat UI frontend
-│       └── assets/               # Tailwind CSS and JS files
-├── .env                          # Secret keys (not tracked)
-├── .gitignore                    # Files ignored by Git
-├── debug.log                     # Application logs (not tracked)
-├── menu.json                     # Menu data source
+│       ├── index.html            # Frontend UI
+│       └── assets/               # CSS, JS, images
+├── .env                          # Environment secrets (not tracked)
+├── .gitignore                    # Ignored files list
+├── debug.log                     # Debug output (optional)
+├── menu.json                     # Menu database
 ├── requirements.txt              # Dependency list
-├── run.py                        # Entry point
-└── README.md                     # Project documentation
-🤝 Contributing
-Pull requests and feedback are welcome! Please open an issue to discuss changes or bugs.
+├── run.py                        # App launcher
+└── README.md                     # Documentation
