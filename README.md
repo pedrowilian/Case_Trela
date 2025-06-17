@@ -5,7 +5,6 @@
 <div align="center">
   <img src="https://img.shields.io/badge/FastAPI-API-green" />
   <img src="https://img.shields.io/badge/OpenAI-Agent-purple" />
-  <img src="https://img.shields.io/badge/LangChain-Reasoning-blue" />
   <img src="https://img.shields.io/badge/TailwindCSS-UI-lightblue" />
 </div>
 
