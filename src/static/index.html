@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trela - Recomendações Saudáveis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #e6fffa, #ccfbf1);
+        }
+        .chat-container {
+            height: 65vh;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #38b2ac #f1f1f1;
+            padding-right: 8px;
+        }
+        .chat-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        .chat-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        .chat-container::-webkit-scrollbar-thumb {
+            background-color: #38b2ac;
+            border-radius: 10px;
+            border: 2px solid #f1f1f1;
+        }
+        .chat-message-user {
+            background: #e0f2fe;
+            border-radius: 1rem 1rem 0 1rem;
+            padding: 0.75rem 1.25rem;
+            margin: 0.5rem 0;
+            align-self: flex-end;
+            max-width: 75%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            word-wrap: break-word;
+        }
+        .chat-message-trela {
+            background: white;
+            border-radius: 1rem 1rem 1rem 0;
+            padding: 0.75rem 1.25rem;
+            margin: 0.5rem 0;
+            align-self: flex-start;
+            max-width: 75%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            word-wrap: break-word;
+        }
+        .meal-card {
+            border: 1px solid #d1fae5;
+            border-radius: 0.75rem;
+            padding: 1rem;
+            margin: 0.75rem 0;
+            background: white;
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+        .meal-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .badge {
+            background: #fef3c7;
+            color: #b45309;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.375rem;
+            font-size: 0.75rem;
+            margin-left: 0.5rem;
+            white-space: nowrap;
+        }
+        .quick-suggestion {
+            background: #f0fdfa;
+            color: #0f766e;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            margin: 0.25rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+        .quick-suggestion:hover {
+            background: #ccfbf1;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+    <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md flex flex-col h-[85vh]">
+        <div class="bg-teal-600 text-white p-4 rounded-t-2xl text-center">
+            <h1 class="text-2xl font-bold">Trela - Recomendações Saudáveis</h1>
+        </div>
+        <div class="p-4">
+            <div class="flex flex-wrap gap-2 mb-2">
+                <span class="quick-suggestion" onclick="setQuery('Prato vegano até R$40')">Vegano até R$40</span>
+                <span class="quick-suggestion" onclick="setQuery('Prato mais barato')">Mais Barato</span>
+                <span class="quick-suggestion" onclick="setQuery('Almoço sem lactose')">Sem Lactose</span>
+                <span class="quick-suggestion" onclick="setQuery('Prato picante com proteína')">Picante com Proteína</span>
+            </div>
+        </div>
+        <div class="chat-container flex-grow px-4 flex flex-col items-start">
+            <div class="chat-message-trela">
+                <span class="font-bold text-teal-700">Trela:</span> Olá! Sou o assistente da Trela, pronto para te ajudar a encontrar refeições saudáveis e deliciosas! 🍽️<br><br>
+                Me conta o que você quer hoje ou clique em uma sugestão acima!
+            </div>
+        </div>
+        <div class="p-4 border-t border-gray-200">
+            <input id="query" type="text" placeholder="Ex.: Quero um prato vegano até R$40"
+                   class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 mb-2">
+            <button onclick="getRecommendation()"
+                    class="w-full bg-teal-600 text-white p-3 rounded-lg hover:bg-teal-700 transition">
+                Encontrar Delícias
+            </button>
+        </div>
+    </div>
+    <script>
+        const chatContainer = document.querySelector('.chat-container');
+        const queryInput = document.getElementById('query');
+
+        function scrollToBottom() {
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        function addMessage(sender, message, extra = '') {
+            if (sender === 'user' && message.trim()) {
+                message = String(message).replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            }
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add(
+                sender === 'user' ? 'chat-message-user' : 'chat-message-trela',
+                'self-' + (sender === 'user' ? 'end' : 'start')
+            );
+            if (sender === 'trela') {
+                message = message.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                message = `<span class="font-bold text-teal-700">Trela:</span> ${message}${extra}`;
+            }
+            messageDiv.innerHTML = message;
+            chatContainer.appendChild(messageDiv);
+            scrollToBottom();
+        }
+
+        function setQuery(query) {
+            queryInput.value = query;
+            getRecommendation();
+        }
+
+        queryInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') getRecommendation();
+        });
+
+        async function getRecommendation() {
+            const query = queryInput.value.trim();
+            if (!query) {
+                addMessage('trela', '<span class="text-red-500">Por favor, me diga o que você quer!</span>');
+                return;
+            }
+
+            addMessage('user', query);
+            queryInput.value = '';
+
+            const loadingMessage = document.createElement('div');
+            loadingMessage.classList.add('chat-message-trela');
+            loadingMessage.innerHTML = `
+                <div class="flex items-center">
+                    <svg class="animate-spin h-5 w-5 text-teal-500 mr-2" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+                    </svg>
+                    <span>Procurando as melhores opções...</span>
+                </div>`;
+            chatContainer.appendChild(loadingMessage);
+            scrollToBottom();
+
+            try {
+                const response = await axios.post('/recommend', { query });
+                const { data } = response;
+                chatContainer.removeChild(loadingMessage);
+                addMessage('trela', data.message);
+
+                if (data.recommendations.length > 0) {
+                    const recommendationsHtml = data.recommendations.reduce((html, meal) => {
+                        const isPopular = meal.popularity >= 0.8;
+                        return html + `
+                            <div class="meal-card">
+                                <h3 class="text-lg font-bold text-gray-700 flex items-center">
+                                    ${meal.nome}${isPopular ? '<span class="badge">Popular</span>' : ''}
+                                </h3>
+                                <p class="text-teal-600 font-semibold">R$ ${meal.preco.toFixed(2).replace('.', ',')}</p>
+                                <p class="text-gray-600">${meal.descricao}</p>
+                                <p class="text-sm text-gray-500 mt-2">Tags: ${meal.tags.join(', ')}</p>
+                            </div>`;
+                    }, '');
+                    addMessage('trela', recommendationsHtml, '<div></div>');
+                    addMessage('trela', 'Gostou? Experimente hoje mesmo! 🍴 Se precisar de mais ideias, é só chamar!');
+                }
+            } catch (error) {
+                chatContainer.removeChild(loadingMessage);
+                let errorMessage = 'Ops! Algo deu errado. Tente novamente!';
+                if (error.response?.data?.detail) {
+                    errorMessage = error.response.data.detail;
+                }
+                addMessage('trela', `<span class="text-red-500">${errorMessage}</span>`);
+                console.error('Error:', error);
+            }
+            scrollToBottom();
+        }
+
+        scrollToBottom();
+    </script>
+</body>
+</html>
