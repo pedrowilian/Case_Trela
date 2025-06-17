@@ -40,51 +40,37 @@
 ```bash
 git clone https://github.com/pedrowilian/Case_Trela.git
 cd Case_Trela
+```
 2. Install Dependencies
 Option 1: Individually
-bash
-Copy
-Edit
+```bash
 pip install fastapi uvicorn openai-agents langchain python-dotenv fuzzywuzzy python-Levenshtein pydantic nest_asyncio pyngrok
+```
 Option 2: With requirements.txt
-bash
-Copy
-Edit
+```bash
 pip install -r requirements.txt
-3. Add Your OpenAI API Key
+```
+4. Add Your OpenAI API Key
 Create a .env file in the root directory:
 
-bash
-Copy
-Edit
-touch .env
-Add the following line to it:
-
-ini
-Copy
-Edit
+```bash
 OPENAI_API_KEY=your_openai_api_key_here
 ✅ .env is already listed in .gitignore and won’t be tracked by Git.
-
+```
 4. Add Menu Data
 Ensure menu.json exists in the project root. If it's located elsewhere, copy it:
 
-bash
-Copy
-Edit
+```bash
 cp /path/to/menu.json ./menu.json
-Then, in src/config.py, ensure the path is set like this:
 
-python
-Copy
-Edit
 MENU_PATH: Path = Path("menu.json")
+
+```
 5. Run the App
-bash
-Copy
-Edit
+```bash
 python run.py
 Then open your browser and go to: http://localhost:8000
+```
 
 💡 Usage
 You can enter natural language queries into the frontend, such as:
@@ -98,9 +84,7 @@ Refeição leve sem lactose
 The query is processed by the /recommend route, interpreted by the OpenAI agent using LangChain, and returns matching meal options from menu.json.
 
 🗂 Project Structure
-bash
-Copy
-Edit
+```bash
 Case_Trela/
 ├── src/
 │   ├── api/
@@ -123,3 +107,4 @@ Case_Trela/
 ├── requirements.txt              # Dependency list
 ├── run.py                        # App launcher
 └── README.md                     # Documentation
+```
