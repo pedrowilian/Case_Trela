@@ -1,0 +1,1239 @@
+2025-06-17 14:35:24,543 - INFO - Loaded 50 menu items from C:\Users\23.01307-9\Desktop\NSEE\Trela\menu.json
+2025-06-17 14:37:45,146 - INFO - Loaded 50 menu items from C:\Users\23.01307-9\Desktop\NSEE\Trela\menu.json
+2025-06-17 14:38:18,449 - INFO - Loaded 50 menu items from C:\Users\23.01307-9\Desktop\NSEE\Trela\menu.json
+2025-06-17 14:40:29,675 - INFO - Loaded 50 menu items from C:\Users\23.01307-9\Desktop\NSEE\Trela\menu.json
+2025-06-17 14:40:35,626 - DEBUG - Processing query: Prato vegano até R$40
+2025-06-17 14:40:36,044 - ERROR - Server error: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+Traceback (most recent call last):
+  File "c:\Users\23.01307-9\Documents\Trela_Final\src\api\routes.py", line 61, in recommend_meal
+    output = await Runner.run(starting_agent=meal_agent, input=query)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\23.01307-9\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\agents\run.py", line 219, in run
+    input_guardrail_results, turn_result = await asyncio.gather(
+                                           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\23.01307-9\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\agents\run.py", line 787, in _run_single_turn
+    new_response = await cls._get_new_response(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\23.01307-9\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\agents\run.py", line 942, in _get_new_response
+    model = cls._get_model(agent, run_config)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\23.01307-9\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\agents\run.py", line 997, in _get_model
+    return run_config.model_provider.get_model(agent.model)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\23.01307-9\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\agents\models\multi_provider.py", line 144, in get_model
+    return self._get_fallback_provider(prefix).get_model(model_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\23.01307-9\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\agents\models\openai_provider.py", line 85, in get_model
+    client = self._get_client()
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\23.01307-9\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\agents\models\openai_provider.py", line 71, in _get_client
+    self._client = _openai_shared.get_default_openai_client() or AsyncOpenAI(
+                                                                 ^^^^^^^^^^^^
+  File "C:\Users\23.01307-9\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\openai\_client.py", line 427, in __init__
+    raise OpenAIError(
+openai.OpenAIError: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2025-06-17 14:40:40,684 - DEBUG - Processing query: Prato mais barato
+2025-06-17 14:40:40,684 - ERROR - Server error: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+Traceback (most recent call last):
+  File "c:\Users\23.01307-9\Documents\Trela_Final\src\api\routes.py", line 61, in recommend_meal
+    output = await Runner.run(starting_agent=meal_agent, input=query)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\23.01307-9\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\agents\run.py", line 219, in run
+    input_guardrail_results, turn_result = await asyncio.gather(
+                                           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\23.01307-9\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\agents\run.py", line 787, in _run_single_turn
+    new_response = await cls._get_new_response(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\23.01307-9\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\agents\run.py", line 942, in _get_new_response
+    model = cls._get_model(agent, run_config)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\23.01307-9\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\agents\run.py", line 997, in _get_model
+    return run_config.model_provider.get_model(agent.model)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\23.01307-9\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\agents\models\multi_provider.py", line 144, in get_model
+    return self._get_fallback_provider(prefix).get_model(model_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\23.01307-9\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\agents\models\openai_provider.py", line 85, in get_model
+    client = self._get_client()
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\23.01307-9\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\agents\models\openai_provider.py", line 71, in _get_client
+    self._client = _openai_shared.get_default_openai_client() or AsyncOpenAI(
+                                                                 ^^^^^^^^^^^^
+  File "C:\Users\23.01307-9\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\openai\_client.py", line 427, in __init__
+    raise OpenAIError(
+openai.OpenAIError: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2025-06-17 14:43:30,963 - INFO - Loaded 50 menu items from C:\Users\23.01307-9\Documents\Trela_Final\menu.json
+2025-06-17 14:43:30,963 - INFO - Meal recommender agent initialized successfully.
+2025-06-17 14:43:36,912 - DEBUG - Processing query: Prato vegano até R$40
+2025-06-17 14:43:56,410 - DEBUG - Extracted budget: 40.0 from query: Prato vegano até R$40
+2025-06-17 14:43:56,410 - DEBUG - Filtering menu with: {'query': 'Prato vegano até R$40', 'budget': 40.0, 'tags': ['vegano'], 'keywords': []}
+2025-06-17 14:43:56,410 - DEBUG - Extracted keywords from query: ['r$40', 'vegano', 'prato']
+2025-06-17 14:43:56,410 - DEBUG - Skipping 'Frango apimentado com broto de feijão' (price 45.0 > 40.0)
+2025-06-17 14:43:56,410 - DEBUG - Skipping 'Camarão ao curry apimentado' (price 52.5 > 40.0)
+2025-06-17 14:43:56,410 - DEBUG - Skipping 'Carne de panela apimentada' (price 49.9 > 40.0)
+2025-06-17 14:43:56,410 - DEBUG - Skipping 'Strogonoff de frango sem lactose' (price 53.0 > 40.0)
+2025-06-17 14:43:56,410 - DEBUG - Skipping 'Salmão grelhado' (price 58.0 > 40.0)
+2025-06-17 14:43:56,410 - DEBUG - Skipping 'Peito de frango grelhado com legumes no vapor' (price 42.0 > 40.0)
+2025-06-17 14:43:56,410 - DEBUG - Skipping 'Escondidinho de batata doce com carne' (price 48.0 > 40.0)
+2025-06-17 14:43:56,410 - DEBUG - Skipping 'Lasanha de berinjela sem lactose' (price 55.0 > 40.0)
+2025-06-17 14:43:56,410 - DEBUG - Skipping 'Arroz carreteiro' (price 50.0 > 40.0)
+2025-06-17 14:43:56,410 - DEBUG - Skipping 'Risoto de cogumelos' (price 45.0 > 40.0)
+2025-06-17 14:43:56,410 - DEBUG - Skipping 'Peito de peru ao molho light' (price 54.0 > 40.0)
+2025-06-17 14:43:56,410 - DEBUG - Skipping 'Escondidinho de frango com batata doce' (price 51.0 > 40.0)
+2025-06-17 14:43:56,410 - DEBUG - Skipping 'Tabule com falafel' (price 41.0 > 40.0)
+2025-06-17 14:43:56,410 - DEBUG - Skipping 'Berinjela recheada com carne' (price 46.0 > 40.0)
+2025-06-17 14:43:56,410 - DEBUG - Skipping 'Filé de peixe ao molho de limão' (price 59.0 > 40.0)
+2025-06-17 14:43:56,410 - DEBUG - Skipping 'Wrap de frango com abacate' (price 48.0 > 40.0)
+2025-06-17 14:43:56,410 - DEBUG - Skipping 'Salada de grão-de-bico com atum' (price 44.0 > 40.0)
+2025-06-17 14:43:56,410 - DEBUG - Skipping 'Frango xadrez sem glúten' (price 47.0 > 40.0)
+2025-06-17 14:43:56,410 - DEBUG - Skipping 'Carne de sol com mandioca' (price 53.0 > 40.0)
+2025-06-17 14:43:56,410 - DEBUG - Skipping 'Espetinho de frango com legumes' (price 42.0 > 40.0)
+2025-06-17 14:43:56,410 - DEBUG - Skipping 'Peito de frango ao molho de laranja' (price 49.0 > 40.0)
+2025-06-17 14:43:56,410 - DEBUG - Skipping 'Purê de batata doce com carne seca' (price 50.0 > 40.0)
+2025-06-17 14:43:56,410 - DEBUG - Skipping 'Bowl de poke de salmão' (price 55.0 > 40.0)
+2025-06-17 14:43:56,410 - DEBUG - Skipping 'Bife à rolê' (price 54.0 > 40.0)
+2025-06-17 14:43:56,410 - DEBUG - Skipping 'Frango ao molho mostarda' (price 52.0 > 40.0)
+2025-06-17 14:43:56,410 - DEBUG - Skipping 'Carne de panela com batatas' (price 56.0 > 40.0)
+2025-06-17 14:43:56,410 - DEBUG - Skipping 'Lasanha de espinafre sem lactose' (price 54.0 > 40.0)
+2025-06-17 14:43:56,410 - DEBUG - Skipping 'Marmita fitness de frango e brócolis' (price 53.0 > 40.0)
+2025-06-17 14:43:56,410 - DEBUG - Skipping 'Bife acebolado sem glúten' (price 51.0 > 40.0)
+2025-06-17 14:43:56,410 - DEBUG - Skipping 'Purê de abóbora com carne moída' (price 45.0 > 40.0)
+2025-06-17 14:43:56,410 - DEBUG - Returning 10 recommendations with message: Encontrei 10 prato(s) incrível(is) para você! Opções **veganas** cheias de sabor! Dentro do seu **orçamento de até R$40.00**! Confira nosso catálogo selecionado com carinho: Dica: Combine com nossa sobremesa vegana por apenas R$15!
+2025-06-17 14:44:02,261 - DEBUG - Agent output: RunResult:
+- Last agent: Agent(name="TrelaMealRecommender", ...)
+- Final output (str):
+    ```json
+    {
+      "recommendations": [
+        {
+          "nome": "Panini vegano de legumes",
+          "preco": 38.0,
+          "descricao": "Pão integral recheado com mix de legumes grelhados.",
+          "tags": ["vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Escondidinho de mandioquinha vegano",
+          "preco": 39.5,
+          "descricao": "Purê de mandioquinha e proteína de soja.",
+          "tags": ["vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Panqueca de banana sem açúcar",
+          "preco": 27.0,
+          "descricao": "Panqueca de banana e aveia sem adição de açúcar.",
+          "tags": ["sem açucar", "vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Bowl de açaí sem açúcar",
+          "preco": 28.0,
+          "descricao": "Açaí puro com frutas e granola sem adição de açúcar.",
+          "tags": ["sem açucar", "vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Salada de frutas sem açúcar",
+          "preco": 29.0,
+          "descricao": "Mix de frutas da estação sem adição de açúcar.",
+          "tags": ["sem açucar", "vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Salada de lentilha com tahine",
+          "preco": 32.0,
+          "descricao": "Lentilhas, tomate, pepino e molho de tahine.",
+          "tags": ["vegano", "sem gluten"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Quinoa com grão-de-bico e legumes",
+          "preco": 35.0,
+          "descricao": "Salada quente de quinoa, grão-de-bico, pimentões e cenoura.",
+          "tags": ["vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Espaguete de abobrinha ao pesto",
+          "preco": 36.0,
+          "descricao": "Tiras de abobrinha com molho pesto e nozes.",
+          "tags": ["vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Tacos de jaca desfiada",
+          "preco": 37.0,
+          "descricao": "Tortillas recheadas com jaca temperada e molho apimentado.",
+          "tags": ["vegano", "picante"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Tofu apimentado com mix de legumes",
+          "preco": 38.0,
+          "descricao": "Cubos de tofu grelhado com mix de legumes e pimenta caiena.",
+          "tags": ["picante", "vegano", "sem lactose"],
+          "popularity": 0.5
+        }
+      ],
+      "message": "Encontrei 10 prato(s) incrível(is) para você! Opções **veganas** cheias de sabor! Dentro do seu **orçamento de até R$40.00**! Confira nosso catálogo selecionado com carinho: Dica: Combine com nossa sobremesa vegana por apenas R$15!"
+    }
+    ```
+- 5 new item(s)
+- 2 raw response(s)
+- 0 input guardrail result(s)
+- 0 output guardrail result(s)
+(See `RunResult` for more details)
+2025-06-17 14:44:02,261 - INFO - Returning 10 recommendations.
+2025-06-17 14:44:12,973 - DEBUG - Processing query: Prato mais barato
+2025-06-17 14:44:14,575 - DEBUG - Filtering menu with: {'query': 'Prato mais barato', 'budget': None, 'tags': [], 'keywords': []}
+2025-06-17 14:44:14,575 - DEBUG - Extracted keywords from query: ['barato', 'prato']
+2025-06-17 14:44:14,575 - DEBUG - Applied 'mais barato' filter: Panqueca de banana sem açúcar
+2025-06-17 14:44:14,575 - DEBUG - Returning 1 recommendations with message: Encontrei 1 prato(s) incrível(is) para você! Este é o nosso **prato mais em conta**! Confira nosso catálogo selecionado com carinho:
+2025-06-17 14:44:16,210 - DEBUG - Agent output: RunResult:
+- Last agent: Agent(name="TrelaMealRecommender", ...)
+- Final output (str):
+    {
+      "recommendations": [
+        {
+          "nome": "Panqueca de banana sem açúcar",
+          "preco": 27.0,
+          "descricao": "Panqueca de banana e aveia sem adição de açúcar.",
+          "tags": ["sem açucar", "vegano"],
+          "popularity": 0.5
+        }
+      ],
+      "message": "Encontrei 1 prato(s) incrível(is) para você! Este é o nosso **prato mais em conta**! Confira nosso catálogo selecionado com carinho:"
+    }
+- 3 new item(s)
+- 2 raw response(s)
+- 0 input guardrail result(s)
+- 0 output guardrail result(s)
+(See `RunResult` for more details)
+2025-06-17 14:44:16,210 - INFO - Returning 1 recommendations.
+2025-06-17 14:44:18,588 - DEBUG - Processing query: Almoço sem lactose
+2025-06-17 14:44:20,141 - DEBUG - Filtering menu with: {'query': 'Almoço sem lactose', 'budget': None, 'tags': ['sem lactose'], 'keywords': ['refeição']}
+2025-06-17 14:44:20,143 - DEBUG - Returning 10 recommendations with message: Encontrei 10 prato(s) incrível(is) para você! Todos **sem lactose**, perfeitos para você! Confira nosso catálogo selecionado com carinho:
+2025-06-17 14:44:26,727 - DEBUG - Agent output: RunResult:
+- Last agent: Agent(name="TrelaMealRecommender", ...)
+- Final output (str):
+    ```json
+    {
+      "recommendations": [
+        {
+          "nome": "Salada Caesar sem lactose",
+          "preco": 34.0,
+          "descricao": "Alface, frango grelhado, croutons e molho Caesar sem lactose.",
+          "tags": ["sem lactose"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Tofu apimentado com mix de legumes",
+          "preco": 38.0,
+          "descricao": "Cubos de tofu grelhado com mix de legumes e pimenta caiena.",
+          "tags": ["picante", "vegano", "sem lactose"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Tabule com falafel",
+          "preco": 41.0,
+          "descricao": "Salada de trigo para quibe, tomate, salsa e bolinhos de falafel.",
+          "tags": ["vegano", "sem lactose", "sem gluten"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Peito de frango grelhado com legumes no vapor",
+          "preco": 42.0,
+          "descricao": "Peito de frango grelhado servido com legumes levemente temperados.",
+          "tags": ["sem lactose"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Espetinho de frango com legumes",
+          "preco": 42.0,
+          "descricao": "Espetinho grelhado de frango, pimentão e cebola.",
+          "tags": ["sem lactose"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Frango ao molho mostarda",
+          "preco": 52.0,
+          "descricao": "Peito de frango com molho de mostarda e mel.",
+          "tags": ["sem lactose"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Camarão ao curry apimentado",
+          "preco": 52.5,
+          "descricao": "Camarões salteados em molho curry picante com leite de coco sem lactose.",
+          "tags": ["picante", "sem lactose"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Strogonoff de frango sem lactose",
+          "preco": 53.0,
+          "descricao": "Frango desfiado ao molho cremoso sem lactose.",
+          "tags": ["sem lactose"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Lasanha de espinafre sem lactose",
+          "preco": 54.0,
+          "descricao": "Lasanha de espinafre com molho branco vegano.",
+          "tags": ["vegano", "sem lactose"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Lasanha de berinjela sem lactose",
+          "preco": 55.0,
+          "descricao": "Camadas de berinjela com molho de tomate e queijo vegano.",
+          "tags": ["vegano", "sem lactose"],
+          "popularity": 0.5
+        }
+      ],
+      "message": "Encontrei 10 prato(s) incrível(is) para você! Todos **sem lactose**, perfeitos para você! Confira nosso catálogo selecionado com carinho:"
+    }
+    ```
+- 3 new item(s)
+- 2 raw response(s)
+- 0 input guardrail result(s)
+- 0 output guardrail result(s)
+(See `RunResult` for more details)
+2025-06-17 14:44:26,727 - INFO - Returning 10 recommendations.
+2025-06-17 14:44:49,159 - DEBUG - Processing query: Prato picante com proteína
+2025-06-17 14:44:51,207 - DEBUG - Filtering menu with: {'query': 'Prato picante com proteína', 'budget': None, 'tags': ['picante'], 'keywords': ['frango', 'carne', 'bife', 'tofu', 'camarão', 'salmão', 'atum', 'peixe', 'peru']}
+2025-06-17 14:44:51,210 - DEBUG - Returning 6 recommendations with message: Encontrei 6 prato(s) incrível(is) para você! Com aquele toque **picante** que você ama! Confira nosso catálogo selecionado com carinho:
+2025-06-17 14:44:56,310 - DEBUG - Agent output: RunResult:
+- Last agent: Agent(name="TrelaMealRecommender", ...)
+- Final output (str):
+    ```json
+    {
+      "recommendations": [
+        {
+          "nome": "Frango apimentado com broto de feijão",
+          "preco": 45.0,
+          "descricao": "Peito de frango grelhado servido com broto de feijão e molho picante.",
+          "tags": ["picante"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Tacos de jaca desfiada",
+          "preco": 37.0,
+          "descricao": "Tortillas recheadas com jaca temperada e molho apimentado.",
+          "tags": ["vegano", "picante"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Tofu apimentado com mix de legumes",
+          "preco": 38.0,
+          "descricao": "Cubos de tofu grelhado com mix de legumes e pimenta caiena.",
+          "tags": ["picante", "vegano", "sem lactose"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Frango xadrez sem glúten",
+          "preco": 47.0,
+          "descricao": "Frango salteado com pimentões e castanhas.",
+          "tags": ["picante", "sem gluten"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Carne de panela apimentada",
+          "preco": 49.9,
+          "descricao": "Carne bovina cozida lentamente com pimenta dedo-de-moça e especiarias.",
+          "tags": ["picante"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Camarão ao curry apimentado",
+          "preco": 52.5,
+          "descricao": "Camarões salteados em molho curry picante com leite de coco sem lactose.",
+          "tags": ["picante", "sem lactose"],
+          "popularity": 0.5
+        }
+      ],
+      "message": "Encontrei 6 prato(s) incrível(is) para você! Com aquele toque **picante** que você ama! Confira nosso catálogo selecionado com carinho:"
+    }
+    ```
+- 3 new item(s)
+- 2 raw response(s)
+- 0 input guardrail result(s)
+- 0 output guardrail result(s)
+(See `RunResult` for more details)
+2025-06-17 14:44:56,310 - INFO - Returning 6 recommendations.
+2025-06-17 14:45:07,692 - DEBUG - Processing query: vsf
+2025-06-17 14:45:12,142 - DEBUG - Agent output: RunResult:
+- Last agent: Agent(name="TrelaMealRecommender", ...)
+- Final output (str):
+    {
+      "recommendations": [],
+      "message": "Parece que você não solicitou nenhum prato específico. Por favor, me diga o que você procura, como restrições alimentares ou ingredientes desejados, para que eu possa ajudar melhor!"
+    }
+- 1 new item(s)
+- 1 raw response(s)
+- 0 input guardrail result(s)
+- 0 output guardrail result(s)
+(See `RunResult` for more details)
+2025-06-17 14:45:12,143 - INFO - Returning 0 recommendations.
+2025-06-17 14:45:24,891 - DEBUG - Processing query: merda
+2025-06-17 14:45:26,882 - DEBUG - Agent output: RunResult:
+- Last agent: Agent(name="TrelaMealRecommender", ...)
+- Final output (str):
+    {
+      "recommendations": [],
+      "message": "Parece que houve um mal-entendido! Estou aqui para ajudar com recomendações de pratos deliciosos e saudáveis. Se precisar de algo específico, por favor, me avise!"
+    }
+- 1 new item(s)
+- 1 raw response(s)
+- 0 input guardrail result(s)
+- 0 output guardrail result(s)
+(See `RunResult` for more details)
+2025-06-17 14:45:26,882 - INFO - Returning 0 recommendations.
+2025-06-17 14:45:53,153 - INFO - Loaded 50 menu items from C:\Users\23.01307-9\Documents\Trela_Final\menu.json
+2025-06-17 14:45:53,153 - INFO - Meal recommender agent initialized successfully.
+2025-06-17 14:46:10,778 - INFO - Loaded 50 menu items from C:\Users\23.01307-9\Documents\Trela_Final\menu.json
+2025-06-17 14:46:10,794 - INFO - Meal recommender agent initialized successfully.
+2025-06-17 14:46:22,676 - DEBUG - Processing query: quero prato com leite
+2025-06-17 14:46:25,885 - DEBUG - Filtering menu with: {'query': 'prato com leite', 'budget': None, 'tags': [], 'keywords': ['leite']}
+2025-06-17 14:46:25,885 - DEBUG - Returning 3 recommendations with message: Encontrei 3 prato(s) incrível(is) para você! Confira nosso catálogo selecionado com carinho:
+2025-06-17 14:46:31,983 - DEBUG - Agent output: RunResult:
+- Last agent: Agent(name="TrelaMealRecommender", ...)
+- Final output (str):
+    ```json
+    {
+      "recommendations": [
+        {
+          "nome": "Omelete de claras com espinafre",
+          "preco": 30.0,
+          "descricao": "Omelete feito com claras, espinafre e tomate cereja.",
+          "tags": [],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Salada de grãos mediterrânea",
+          "preco": 37.0,
+          "descricao": "Mix de grãos, tomate seco, azeitonas e ervas.",
+          "tags": [],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Camarão ao curry apimentado",
+          "preco": 52.5,
+          "descricao": "Camarões salteados em molho curry picante com leite de coco sem lactose.",
+          "tags": ["picante", "sem lactose"],
+          "popularity": 0.5
+        }
+      ],
+      "message": "Encontrei 3 prato(s) incrível(is) para você! Confira nosso catálogo selecionado com carinho:"
+    }
+    ```
+- 3 new item(s)
+- 2 raw response(s)
+- 0 input guardrail result(s)
+- 0 output guardrail result(s)
+(See `RunResult` for more details)
+2025-06-17 14:46:31,983 - INFO - Returning 3 recommendations.
+2025-06-17 14:46:49,968 - DEBUG - Processing query: Quero pratos com frango
+2025-06-17 14:46:51,383 - DEBUG - Filtering menu with: {'query': 'Quero pratos com frango', 'budget': None, 'tags': [], 'keywords': ['frango']}
+2025-06-17 14:46:51,383 - DEBUG - Returning 10 recommendations with message: Encontrei 10 prato(s) incrível(is) para você! Confira nosso catálogo selecionado com carinho:
+2025-06-17 14:46:59,178 - DEBUG - Agent output: RunResult:
+- Last agent: Agent(name="TrelaMealRecommender", ...)
+- Final output (str):
+    ```json
+    {
+      "recommendations": [
+        {
+          "nome": "Peito de frango grelhado com legumes no vapor",
+          "preco": 42.0,
+          "descricao": "Peito de frango grelhado servido com legumes levemente temperados.",
+          "tags": ["sem lactose"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Espetinho de frango com legumes",
+          "preco": 42.0,
+          "descricao": "Espetinho grelhado de frango, pimentão e cebola.",
+          "tags": ["sem lactose"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Frango apimentado com broto de feijão",
+          "preco": 45.0,
+          "descricao": "Peito de frango grelhado servido com broto de feijão e molho picante.",
+          "tags": ["picante"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Frango xadrez sem glúten",
+          "preco": 47.0,
+          "descricao": "Frango salteado com pimentões e castanhas.",
+          "tags": ["picante", "sem gluten"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Wrap de frango com abacate",
+          "preco": 48.0,
+          "descricao": "Tortilla recheada com frango, abacate e alface.",
+          "tags": [],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Peito de frango ao molho de laranja",
+          "preco": 49.0,
+          "descricao": "Frango grelhado com molho cítrico e gergelim.",
+          "tags": [],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Escondidinho de frango com batata doce",
+          "preco": 51.0,
+          "descricao": "Purê de batata doce e frango desfiado.",
+          "tags": [],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Frango ao molho mostarda",
+          "preco": 52.0,
+          "descricao": "Peito de frango com molho de mostarda e mel.",
+          "tags": ["sem lactose"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Strogonoff de frango sem lactose",
+          "preco": 53.0,
+          "descricao": "Frango desfiado ao molho cremoso sem lactose.",
+          "tags": ["sem lactose"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Marmita fitness de frango e brócolis",
+          "preco": 53.0,
+          "descricao": "Peito de frango, brócolis e arroz integral.",
+          "tags": [],
+          "popularity": 0.5
+        }
+      ],
+      "message": "Encontrei 10 prato(s) incrível(is) para você! Confira nosso catálogo selecionado com carinho:"
+    }
+    ```
+- 3 new item(s)
+- 2 raw response(s)
+- 0 input guardrail result(s)
+- 0 output guardrail result(s)
+(See `RunResult` for more details)
+2025-06-17 14:46:59,178 - INFO - Returning 10 recommendations.
+2025-06-17 14:49:08,712 - INFO - Loaded 50 menu items from C:\Users\23.01307-9\Documents\Trela_Final\menu.json
+2025-06-17 14:49:08,716 - INFO - Meal recommender agent initialized successfully.
+2025-06-17 14:49:21,851 - DEBUG - Processing query: Prato vegano até R$40
+2025-06-17 14:49:24,626 - DEBUG - Extracted budget: 40.0 from query: Prato vegano até R$40
+2025-06-17 14:49:24,626 - DEBUG - Filtering menu with: {'query': 'Prato vegano até R$40', 'budget': 40.0, 'tags': ['vegano'], 'keywords': []}
+2025-06-17 14:49:24,626 - DEBUG - Extracted keywords from query: ['vegano', 'r$40', 'prato']
+2025-06-17 14:49:24,626 - DEBUG - Skipping 'Frango apimentado com broto de feijão' (price 45.0 > 40.0)
+2025-06-17 14:49:24,627 - DEBUG - Skipping 'Camarão ao curry apimentado' (price 52.5 > 40.0)
+2025-06-17 14:49:24,627 - DEBUG - Skipping 'Carne de panela apimentada' (price 49.9 > 40.0)
+2025-06-17 14:49:24,627 - DEBUG - Skipping 'Strogonoff de frango sem lactose' (price 53.0 > 40.0)
+2025-06-17 14:49:24,627 - DEBUG - Skipping 'Salmão grelhado' (price 58.0 > 40.0)
+2025-06-17 14:49:24,627 - DEBUG - Skipping 'Peito de frango grelhado com legumes no vapor' (price 42.0 > 40.0)
+2025-06-17 14:49:24,627 - DEBUG - Skipping 'Escondidinho de batata doce com carne' (price 48.0 > 40.0)
+2025-06-17 14:49:24,627 - DEBUG - Skipping 'Lasanha de berinjela sem lactose' (price 55.0 > 40.0)
+2025-06-17 14:49:24,627 - DEBUG - Skipping 'Arroz carreteiro' (price 50.0 > 40.0)
+2025-06-17 14:49:24,627 - DEBUG - Skipping 'Risoto de cogumelos' (price 45.0 > 40.0)
+2025-06-17 14:49:24,627 - DEBUG - Skipping 'Peito de peru ao molho light' (price 54.0 > 40.0)
+2025-06-17 14:49:24,627 - DEBUG - Skipping 'Escondidinho de frango com batata doce' (price 51.0 > 40.0)
+2025-06-17 14:49:24,627 - DEBUG - Skipping 'Tabule com falafel' (price 41.0 > 40.0)
+2025-06-17 14:49:24,627 - DEBUG - Skipping 'Berinjela recheada com carne' (price 46.0 > 40.0)
+2025-06-17 14:49:24,627 - DEBUG - Skipping 'Filé de peixe ao molho de limão' (price 59.0 > 40.0)
+2025-06-17 14:49:24,627 - DEBUG - Skipping 'Wrap de frango com abacate' (price 48.0 > 40.0)
+2025-06-17 14:49:24,627 - DEBUG - Skipping 'Salada de grão-de-bico com atum' (price 44.0 > 40.0)
+2025-06-17 14:49:24,627 - DEBUG - Skipping 'Frango xadrez sem glúten' (price 47.0 > 40.0)
+2025-06-17 14:49:24,627 - DEBUG - Skipping 'Carne de sol com mandioca' (price 53.0 > 40.0)
+2025-06-17 14:49:24,627 - DEBUG - Skipping 'Espetinho de frango com legumes' (price 42.0 > 40.0)
+2025-06-17 14:49:24,627 - DEBUG - Skipping 'Peito de frango ao molho de laranja' (price 49.0 > 40.0)
+2025-06-17 14:49:24,627 - DEBUG - Skipping 'Purê de batata doce com carne seca' (price 50.0 > 40.0)
+2025-06-17 14:49:24,627 - DEBUG - Skipping 'Bowl de poke de salmão' (price 55.0 > 40.0)
+2025-06-17 14:49:24,627 - DEBUG - Skipping 'Bife à rolê' (price 54.0 > 40.0)
+2025-06-17 14:49:24,627 - DEBUG - Skipping 'Frango ao molho mostarda' (price 52.0 > 40.0)
+2025-06-17 14:49:24,627 - DEBUG - Skipping 'Carne de panela com batatas' (price 56.0 > 40.0)
+2025-06-17 14:49:24,627 - DEBUG - Skipping 'Lasanha de espinafre sem lactose' (price 54.0 > 40.0)
+2025-06-17 14:49:24,627 - DEBUG - Skipping 'Marmita fitness de frango e brócolis' (price 53.0 > 40.0)
+2025-06-17 14:49:24,627 - DEBUG - Skipping 'Bife acebolado sem glúten' (price 51.0 > 40.0)
+2025-06-17 14:49:24,627 - DEBUG - Skipping 'Purê de abóbora com carne moída' (price 45.0 > 40.0)
+2025-06-17 14:49:24,627 - DEBUG - Returning 10 recommendations with message: Encontrei 10 prato(s) incrível(is) para você! Opções **veganas** cheias de sabor! Dentro do seu **orçamento de até R$40.00**! Confira nosso catálogo selecionado com carinho: Dica: Combine com nossa sobremesa vegana por apenas R$15!
+2025-06-17 14:49:31,412 - DEBUG - Agent output: RunResult:
+- Last agent: Agent(name="TrelaMealRecommender", ...)
+- Final output (str):
+    ```json
+    {
+      "recommendations": [
+        {
+          "nome": "Panini vegano de legumes",
+          "preco": 38.0,
+          "descricao": "Pão integral recheado com mix de legumes grelhados.",
+          "tags": ["vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Escondidinho de mandioquinha vegano",
+          "preco": 39.5,
+          "descricao": "Purê de mandioquinha e proteína de soja.",
+          "tags": ["vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Panqueca de banana sem açúcar",
+          "preco": 27.0,
+          "descricao": "Panqueca de banana e aveia sem adição de açúcar.",
+          "tags": ["sem açucar", "vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Bowl de açaí sem açúcar",
+          "preco": 28.0,
+          "descricao": "Açaí puro com frutas e granola sem adição de açúcar.",
+          "tags": ["sem açucar", "vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Salada de frutas sem açúcar",
+          "preco": 29.0,
+          "descricao": "Mix de frutas da estação sem adição de açúcar.",
+          "tags": ["sem açucar", "vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Salada de lentilha com tahine",
+          "preco": 32.0,
+          "descricao": "Lentilhas, tomate, pepino e molho de tahine.",
+          "tags": ["vegano", "sem gluten"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Quinoa com grão-de-bico e legumes",
+          "preco": 35.0,
+          "descricao": "Salada quente de quinoa, grão-de-bico, pimentões e cenoura.",
+          "tags": ["vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Espaguete de abobrinha ao pesto",
+          "preco": 36.0,
+          "descricao": "Tiras de abobrinha com molho pesto e nozes.",
+          "tags": ["vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Tacos de jaca desfiada",
+          "preco": 37.0,
+          "descricao": "Tortillas recheadas com jaca temperada e molho apimentado.",
+          "tags": ["vegano", "picante"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Tofu apimentado com mix de legumes",
+          "preco": 38.0,
+          "descricao": "Cubos de tofu grelhado com mix de legumes e pimenta caiena.",
+          "tags": ["picante", "vegano", "sem lactose"],
+          "popularity": 0.5
+        }
+      ],
+      "message": "Encontrei 10 prato(s) incrível(is) para você! Opções **veganas** cheias de sabor! Dentro do seu **orçamento de até R$40.00**! Confira nosso catálogo selecionado com carinho: Dica: Combine com nossa sobremesa vegana por apenas R$15!"
+    }
+    ```
+- 5 new item(s)
+- 2 raw response(s)
+- 0 input guardrail result(s)
+- 0 output guardrail result(s)
+(See `RunResult` for more details)
+2025-06-17 14:49:31,412 - INFO - Returning 10 recommendations.
+2025-06-17 14:50:13,288 - DEBUG - Processing query: vsf
+2025-06-17 14:50:18,674 - DEBUG - Agent output: RunResult:
+- Last agent: Agent(name="TrelaMealRecommender", ...)
+- Final output (str):
+    {
+      "recommendations": [],
+      "message": "Desculpe, não consegui entender sua solicitação. Por favor, forneça mais detalhes sobre suas preferências culinárias!"
+    }
+- 1 new item(s)
+- 1 raw response(s)
+- 0 input guardrail result(s)
+- 0 output guardrail result(s)
+(See `RunResult` for more details)
+2025-06-17 14:50:18,674 - INFO - Returning 0 recommendations.
+2025-06-17 15:02:04,375 - INFO - Loaded 50 menu items from C:\Users\23.01307-9\Documents\Trela_Final\menu.json
+2025-06-17 15:02:04,375 - INFO - Meal recommender agent initialized successfully.
+2025-06-17 15:04:00,330 - INFO - Loaded 50 menu items from C:\Users\23.01307-9\Documents\Trela_Final\menu.json
+2025-06-17 15:04:00,330 - INFO - Meal recommender agent initialized successfully.
+2025-06-17 15:06:43,743 - INFO - Loaded 50 menu items from C:\Users\23.01307-9\Documents\Trela_Final\menu.json
+2025-06-17 15:06:43,743 - INFO - Meal recommender agent initialized successfully.
+2025-06-17 15:06:50,286 - DEBUG - Processing query: Prato vegano até R$40
+2025-06-17 15:06:56,397 - DEBUG - Extracted budget: 40.0 from query: Prato vegano até R$40
+2025-06-17 15:06:56,397 - DEBUG - Filtering menu with: {'query': 'Prato vegano até R$40', 'budget': 40.0, 'tags': ['vegano'], 'keywords': []}
+2025-06-17 15:06:56,397 - DEBUG - Extracted keywords from query: ['r$40', 'vegano', 'prato']
+2025-06-17 15:06:56,397 - DEBUG - Skipping 'Frango apimentado com broto de feijão' (price 45.0 > 40.0)
+2025-06-17 15:06:56,397 - DEBUG - Skipping 'Camarão ao curry apimentado' (price 52.5 > 40.0)
+2025-06-17 15:06:56,397 - DEBUG - Skipping 'Carne de panela apimentada' (price 49.9 > 40.0)
+2025-06-17 15:06:56,397 - DEBUG - Skipping 'Strogonoff de frango sem lactose' (price 53.0 > 40.0)
+2025-06-17 15:06:56,397 - DEBUG - Skipping 'Salmão grelhado' (price 58.0 > 40.0)
+2025-06-17 15:06:56,397 - DEBUG - Skipping 'Peito de frango grelhado com legumes no vapor' (price 42.0 > 40.0)
+2025-06-17 15:06:56,397 - DEBUG - Skipping 'Escondidinho de batata doce com carne' (price 48.0 > 40.0)
+2025-06-17 15:06:56,397 - DEBUG - Skipping 'Lasanha de berinjela sem lactose' (price 55.0 > 40.0)
+2025-06-17 15:06:56,397 - DEBUG - Skipping 'Arroz carreteiro' (price 50.0 > 40.0)
+2025-06-17 15:06:56,397 - DEBUG - Skipping 'Risoto de cogumelos' (price 45.0 > 40.0)
+2025-06-17 15:06:56,397 - DEBUG - Skipping 'Peito de peru ao molho light' (price 54.0 > 40.0)
+2025-06-17 15:06:56,397 - DEBUG - Skipping 'Escondidinho de frango com batata doce' (price 51.0 > 40.0)
+2025-06-17 15:06:56,397 - DEBUG - Skipping 'Tabule com falafel' (price 41.0 > 40.0)
+2025-06-17 15:06:56,397 - DEBUG - Skipping 'Berinjela recheada com carne' (price 46.0 > 40.0)
+2025-06-17 15:06:56,397 - DEBUG - Skipping 'Filé de peixe ao molho de limão' (price 59.0 > 40.0)
+2025-06-17 15:06:56,397 - DEBUG - Skipping 'Wrap de frango com abacate' (price 48.0 > 40.0)
+2025-06-17 15:06:56,397 - DEBUG - Skipping 'Salada de grão-de-bico com atum' (price 44.0 > 40.0)
+2025-06-17 15:06:56,397 - DEBUG - Skipping 'Frango xadrez sem glúten' (price 47.0 > 40.0)
+2025-06-17 15:06:56,397 - DEBUG - Skipping 'Carne de sol com mandioca' (price 53.0 > 40.0)
+2025-06-17 15:06:56,397 - DEBUG - Skipping 'Espetinho de frango com legumes' (price 42.0 > 40.0)
+2025-06-17 15:06:56,402 - DEBUG - Skipping 'Peito de frango ao molho de laranja' (price 49.0 > 40.0)
+2025-06-17 15:06:56,402 - DEBUG - Skipping 'Purê de batata doce com carne seca' (price 50.0 > 40.0)
+2025-06-17 15:06:56,402 - DEBUG - Skipping 'Bowl de poke de salmão' (price 55.0 > 40.0)
+2025-06-17 15:06:56,402 - DEBUG - Skipping 'Bife à rolê' (price 54.0 > 40.0)
+2025-06-17 15:06:56,402 - DEBUG - Skipping 'Frango ao molho mostarda' (price 52.0 > 40.0)
+2025-06-17 15:06:56,402 - DEBUG - Skipping 'Carne de panela com batatas' (price 56.0 > 40.0)
+2025-06-17 15:06:56,402 - DEBUG - Skipping 'Lasanha de espinafre sem lactose' (price 54.0 > 40.0)
+2025-06-17 15:06:56,402 - DEBUG - Skipping 'Marmita fitness de frango e brócolis' (price 53.0 > 40.0)
+2025-06-17 15:06:56,402 - DEBUG - Skipping 'Bife acebolado sem glúten' (price 51.0 > 40.0)
+2025-06-17 15:06:56,402 - DEBUG - Skipping 'Purê de abóbora com carne moída' (price 45.0 > 40.0)
+2025-06-17 15:06:56,402 - DEBUG - Returning 10 recommendations with message: Encontrei 10 prato(s) incrível(is) para você! Opções **veganas** cheias de sabor! Dentro do seu **orçamento de até R$40.00**! Confira nosso catálogo selecionado com carinho: Dica: Combine com nossa sobremesa vegana por apenas R$15!
+2025-06-17 15:07:03,930 - DEBUG - Agent output: RunResult:
+- Last agent: Agent(name="TrelaMealRecommender", ...)
+- Final output (str):
+    ```json
+    {
+      "recommendations": [
+        {
+          "nome": "Panini vegano de legumes",
+          "preco": 38.0,
+          "descricao": "Pão integral recheado com mix de legumes grelhados.",
+          "tags": ["vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Escondidinho de mandioquinha vegano",
+          "preco": 39.5,
+          "descricao": "Purê de mandioquinha e proteína de soja.",
+          "tags": ["vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Panqueca de banana sem açúcar",
+          "preco": 27.0,
+          "descricao": "Panqueca de banana e aveia sem adição de açúcar.",
+          "tags": ["sem açucar", "vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Bowl de açaí sem açúcar",
+          "preco": 28.0,
+          "descricao": "Açaí puro com frutas e granola sem adição de açúcar.",
+          "tags": ["sem açucar", "vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Salada de frutas sem açúcar",
+          "preco": 29.0,
+          "descricao": "Mix de frutas da estação sem adição de açúcar.",
+          "tags": ["sem açucar", "vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Salada de lentilha com tahine",
+          "preco": 32.0,
+          "descricao": "Lentilhas, tomate, pepino e molho de tahine.",
+          "tags": ["vegano", "sem gluten"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Quinoa com grão-de-bico e legumes",
+          "preco": 35.0,
+          "descricao": "Salada quente de quinoa, grão-de-bico, pimentões e cenoura.",
+          "tags": ["vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Espaguete de abobrinha ao pesto",
+          "preco": 36.0,
+          "descricao": "Tiras de abobrinha com molho pesto e nozes.",
+          "tags": ["vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Tacos de jaca desfiada",
+          "preco": 37.0,
+          "descricao": "Tortillas recheadas com jaca temperada e molho apimentado.",
+          "tags": ["vegano", "picante"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Tofu apimentado com mix de legumes",
+          "preco": 38.0,
+          "descricao": "Cubos de tofu grelhado com mix de legumes e pimenta caiena.",
+          "tags": ["picante", "vegano", "sem lactose"],
+          "popularity": 0.5
+        }
+      ],
+      "message": "Encontrei 10 prato(s) incrível(is) para você! Opções **veganas** cheias de sabor! Dentro do seu **orçamento de até R$40.00**! Confira nosso catálogo selecionado com carinho: Dica: Combine com nossa sobremesa vegana por apenas R$15!"
+    }
+    ```
+- 5 new item(s)
+- 2 raw response(s)
+- 0 input guardrail result(s)
+- 0 output guardrail result(s)
+(See `RunResult` for more details)
+2025-06-17 15:07:03,930 - INFO - Returning 10 recommendations.
+2025-06-17 15:07:08,427 - DEBUG - Processing query: Prato mais barato
+2025-06-17 15:07:09,561 - DEBUG - Filtering menu with: {'query': 'Prato mais barato', 'budget': None, 'tags': [], 'keywords': []}
+2025-06-17 15:07:09,561 - DEBUG - Extracted keywords from query: ['barato', 'prato']
+2025-06-17 15:07:09,561 - DEBUG - Applied 'mais barato' filter: Panqueca de banana sem açúcar
+2025-06-17 15:07:09,561 - DEBUG - Returning 1 recommendations with message: Encontrei 1 prato(s) incrível(is) para você! Este é o nosso **prato mais em conta**! Confira nosso catálogo selecionado com carinho:
+2025-06-17 15:07:11,129 - DEBUG - Agent output: RunResult:
+- Last agent: Agent(name="TrelaMealRecommender", ...)
+- Final output (str):
+    {
+      "recommendations": [
+        {
+          "nome": "Panqueca de banana sem açúcar",
+          "preco": 27.0,
+          "descricao": "Panqueca de banana e aveia sem adição de açúcar.",
+          "tags": ["sem açucar", "vegano"],
+          "popularity": 0.5
+        }
+      ],
+      "message": "Encontrei 1 prato(s) incrível(is) para você! Este é o nosso **prato mais em conta**! Confira nosso catálogo selecionado com carinho:"
+    }
+- 3 new item(s)
+- 2 raw response(s)
+- 0 input guardrail result(s)
+- 0 output guardrail result(s)
+(See `RunResult` for more details)
+2025-06-17 15:07:11,129 - INFO - Returning 1 recommendations.
+2025-06-17 15:07:17,363 - DEBUG - Processing query: Almoço sem lactose
+2025-06-17 15:07:18,514 - DEBUG - Filtering menu with: {'query': 'Almoço sem lactose', 'budget': None, 'tags': ['sem lactose'], 'keywords': []}
+2025-06-17 15:07:18,514 - DEBUG - Extracted keywords from query: ['almoço', 'lactose']
+2025-06-17 15:07:18,524 - DEBUG - Returning 10 recommendations with message: Encontrei 10 prato(s) incrível(is) para você! Todos **sem lactose**, perfeitos para você! Confira nosso catálogo selecionado com carinho:
+2025-06-17 15:07:28,113 - DEBUG - Agent output: RunResult:
+- Last agent: Agent(name="TrelaMealRecommender", ...)
+- Final output (str):
+    ```json
+    {
+      "recommendations": [
+        {
+          "nome": "Salada Caesar sem lactose",
+          "preco": 34.0,
+          "descricao": "Alface, frango grelhado, croutons e molho Caesar sem lactose.",
+          "tags": ["sem lactose"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Strogonoff de frango sem lactose",
+          "preco": 53.0,
+          "descricao": "Frango desfiado ao molho cremoso sem lactose.",
+          "tags": ["sem lactose"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Lasanha de espinafre sem lactose",
+          "preco": 54.0,
+          "descricao": "Lasanha de espinafre com molho branco vegano.",
+          "tags": ["vegano", "sem lactose"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Lasanha de berinjela sem lactose",
+          "preco": 55.0,
+          "descricao": "Camadas de berinjela com molho de tomate e queijo vegano.",
+          "tags": ["vegano", "sem lactose"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Tofu apimentado com mix de legumes",
+          "preco": 38.0,
+          "descricao": "Cubos de tofu grelhado com mix de legumes e pimenta caiena.",
+          "tags": ["picante", "vegano", "sem lactose"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Tabule com falafel",
+          "preco": 41.0,
+          "descricao": "Salada de trigo para quibe, tomate, salsa e bolinhos de falafel.",
+          "tags": ["vegano", "sem lactose", "sem gluten"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Peito de frango grelhado com legumes no vapor",
+          "preco": 42.0,
+          "descricao": "Peito de frango grelhado servido com legumes levemente temperados.",
+          "tags": ["sem lactose"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Espetinho de frango com legumes",
+          "preco": 42.0,
+          "descricao": "Espetinho grelhado de frango, pimentão e cebola.",
+          "tags": ["sem lactose"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Frango ao molho mostarda",
+          "preco": 52.0,
+          "descricao": "Peito de frango com molho de mostarda e mel.",
+          "tags": ["sem lactose"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Camarão ao curry apimentado",
+          "preco": 52.5,
+          "descricao": "Camarões salteados em molho curry picante com leite de coco sem lactose.",
+          "tags": ["picante", "sem lactose"],
+          "popularity": 0.5
+        }
+      ],
+      "message": "Encontrei 10 prato(s) incrível(is) para você! Todos **sem lactose**, perfeitos para você! Confira nosso catálogo selecionado com carinho:"
+    }
+    ```
+- 3 new item(s)
+- 2 raw response(s)
+- 0 input guardrail result(s)
+- 0 output guardrail result(s)
+(See `RunResult` for more details)
+2025-06-17 15:07:28,113 - INFO - Returning 10 recommendations.
+2025-06-17 15:10:04,857 - INFO - Loaded 50 menu items from C:\Users\23.01307-9\Documents\Trela_Final\menu.json
+2025-06-17 15:10:04,857 - INFO - Meal recommender agent initialized successfully.
+2025-06-17 15:10:09,566 - DEBUG - Processing query: Prato vegano até R$40
+2025-06-17 15:10:12,729 - DEBUG - Extracted budget: 40.0 from query: Prato vegano até R$40
+2025-06-17 15:10:12,729 - DEBUG - Filtering menu with: {'query': 'Prato vegano até R$40', 'budget': 40.0, 'tags': ['vegano'], 'keywords': []}
+2025-06-17 15:10:12,729 - DEBUG - Extracted keywords from query: ['prato', 'vegano', 'r$40']
+2025-06-17 15:10:12,729 - DEBUG - Skipping 'Frango apimentado com broto de feijão' (price 45.0 > 40.0)
+2025-06-17 15:10:12,729 - DEBUG - Skipping 'Camarão ao curry apimentado' (price 52.5 > 40.0)
+2025-06-17 15:10:12,729 - DEBUG - Skipping 'Carne de panela apimentada' (price 49.9 > 40.0)
+2025-06-17 15:10:12,729 - DEBUG - Skipping 'Strogonoff de frango sem lactose' (price 53.0 > 40.0)
+2025-06-17 15:10:12,729 - DEBUG - Skipping 'Salmão grelhado' (price 58.0 > 40.0)
+2025-06-17 15:10:12,729 - DEBUG - Skipping 'Peito de frango grelhado com legumes no vapor' (price 42.0 > 40.0)
+2025-06-17 15:10:12,729 - DEBUG - Skipping 'Escondidinho de batata doce com carne' (price 48.0 > 40.0)
+2025-06-17 15:10:12,729 - DEBUG - Skipping 'Lasanha de berinjela sem lactose' (price 55.0 > 40.0)
+2025-06-17 15:10:12,729 - DEBUG - Skipping 'Arroz carreteiro' (price 50.0 > 40.0)
+2025-06-17 15:10:12,729 - DEBUG - Skipping 'Risoto de cogumelos' (price 45.0 > 40.0)
+2025-06-17 15:10:12,729 - DEBUG - Skipping 'Peito de peru ao molho light' (price 54.0 > 40.0)
+2025-06-17 15:10:12,729 - DEBUG - Skipping 'Escondidinho de frango com batata doce' (price 51.0 > 40.0)
+2025-06-17 15:10:12,729 - DEBUG - Skipping 'Tabule com falafel' (price 41.0 > 40.0)
+2025-06-17 15:10:12,729 - DEBUG - Skipping 'Berinjela recheada com carne' (price 46.0 > 40.0)
+2025-06-17 15:10:12,729 - DEBUG - Skipping 'Filé de peixe ao molho de limão' (price 59.0 > 40.0)
+2025-06-17 15:10:12,729 - DEBUG - Skipping 'Wrap de frango com abacate' (price 48.0 > 40.0)
+2025-06-17 15:10:12,729 - DEBUG - Skipping 'Salada de grão-de-bico com atum' (price 44.0 > 40.0)
+2025-06-17 15:10:12,729 - DEBUG - Skipping 'Frango xadrez sem glúten' (price 47.0 > 40.0)
+2025-06-17 15:10:12,729 - DEBUG - Skipping 'Carne de sol com mandioca' (price 53.0 > 40.0)
+2025-06-17 15:10:12,729 - DEBUG - Skipping 'Espetinho de frango com legumes' (price 42.0 > 40.0)
+2025-06-17 15:10:12,729 - DEBUG - Skipping 'Peito de frango ao molho de laranja' (price 49.0 > 40.0)
+2025-06-17 15:10:12,743 - DEBUG - Skipping 'Purê de batata doce com carne seca' (price 50.0 > 40.0)
+2025-06-17 15:10:12,743 - DEBUG - Skipping 'Bowl de poke de salmão' (price 55.0 > 40.0)
+2025-06-17 15:10:12,743 - DEBUG - Skipping 'Bife à rolê' (price 54.0 > 40.0)
+2025-06-17 15:10:12,743 - DEBUG - Skipping 'Frango ao molho mostarda' (price 52.0 > 40.0)
+2025-06-17 15:10:12,743 - DEBUG - Skipping 'Carne de panela com batatas' (price 56.0 > 40.0)
+2025-06-17 15:10:12,743 - DEBUG - Skipping 'Lasanha de espinafre sem lactose' (price 54.0 > 40.0)
+2025-06-17 15:10:12,743 - DEBUG - Skipping 'Marmita fitness de frango e brócolis' (price 53.0 > 40.0)
+2025-06-17 15:10:12,743 - DEBUG - Skipping 'Bife acebolado sem glúten' (price 51.0 > 40.0)
+2025-06-17 15:10:12,743 - DEBUG - Skipping 'Purê de abóbora com carne moída' (price 45.0 > 40.0)
+2025-06-17 15:10:12,743 - DEBUG - Returning 10 recommendations with message: Encontrei 10 prato(s) incrível(is) para você! Opções **veganas** cheias de sabor! Dentro do seu **orçamento de até R$40.00**! Confira nosso catálogo selecionado com carinho: Dica: Combine com nossa sobremesa vegana por apenas R$15!
+2025-06-17 15:10:19,893 - DEBUG - Agent output: RunResult:
+- Last agent: Agent(name="TrelaMealRecommender", ...)
+- Final output (str):
+    ```json
+    {
+      "recommendations": [
+        {
+          "nome": "Panini vegano de legumes",
+          "preco": 38.0,
+          "descricao": "Pão integral recheado com mix de legumes grelhados.",
+          "tags": ["vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Escondidinho de mandioquinha vegano",
+          "preco": 39.5,
+          "descricao": "Purê de mandioquinha e proteína de soja.",
+          "tags": ["vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Panqueca de banana sem açúcar",
+          "preco": 27.0,
+          "descricao": "Panqueca de banana e aveia sem adição de açúcar.",
+          "tags": ["sem açucar", "vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Bowl de açaí sem açúcar",
+          "preco": 28.0,
+          "descricao": "Açaí puro com frutas e granola sem adição de açúcar.",
+          "tags": ["sem açucar", "vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Salada de frutas sem açúcar",
+          "preco": 29.0,
+          "descricao": "Mix de frutas da estação sem adição de açúcar.",
+          "tags": ["sem açucar", "vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Salada de lentilha com tahine",
+          "preco": 32.0,
+          "descricao": "Lentilhas, tomate, pepino e molho de tahine.",
+          "tags": ["vegano", "sem gluten"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Quinoa com grão-de-bico e legumes",
+          "preco": 35.0,
+          "descricao": "Salada quente de quinoa, grão-de-bico, pimentões e cenoura.",
+          "tags": ["vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Espaguete de abobrinha ao pesto",
+          "preco": 36.0,
+          "descricao": "Tiras de abobrinha com molho pesto e nozes.",
+          "tags": ["vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Tacos de jaca desfiada",
+          "preco": 37.0,
+          "descricao": "Tortillas recheadas com jaca temperada e molho apimentado.",
+          "tags": ["vegano", "picante"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Tofu apimentado com mix de legumes",
+          "preco": 38.0,
+          "descricao": "Cubos de tofu grelhado com mix de legumes e pimenta caiena.",
+          "tags": ["picante", "vegano", "sem lactose"],
+          "popularity": 0.5
+        }
+      ],
+      "message": "Encontrei 10 prato(s) incrível(is) para você! Opções **veganas** cheias de sabor! Dentro do seu **orçamento de até R$40.00**! Confira nosso catálogo selecionado com carinho: Dica: Combine com nossa sobremesa vegana por apenas R$15!"
+    }
+    ```
+- 5 new item(s)
+- 2 raw response(s)
+- 0 input guardrail result(s)
+- 0 output guardrail result(s)
+(See `RunResult` for more details)
+2025-06-17 15:10:19,893 - INFO - Returning 10 recommendations.
+2025-06-17 15:10:23,531 - DEBUG - Processing query: prato com frango
+2025-06-17 15:10:24,828 - DEBUG - Filtering menu with: {'query': 'prato com frango', 'budget': None, 'tags': [], 'keywords': ['frango']}
+2025-06-17 15:10:24,828 - DEBUG - Returning 10 recommendations with message: Encontrei 10 prato(s) incrível(is) para você! Confira nosso catálogo selecionado com carinho:
+2025-06-17 15:10:31,378 - DEBUG - Agent output: RunResult:
+- Last agent: Agent(name="TrelaMealRecommender", ...)
+- Final output (str):
+    ```json
+    {
+      "recommendations": [
+        {
+          "nome": "Peito de frango grelhado com legumes no vapor",
+          "preco": 42.0,
+          "descricao": "Peito de frango grelhado servido com legumes levemente temperados.",
+          "tags": ["sem lactose"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Espetinho de frango com legumes",
+          "preco": 42.0,
+          "descricao": "Espetinho grelhado de frango, pimentão e cebola.",
+          "tags": ["sem lactose"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Frango apimentado com broto de feijão",
+          "preco": 45.0,
+          "descricao": "Peito de frango grelhado servido com broto de feijão e molho picante.",
+          "tags": ["picante"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Frango xadrez sem glúten",
+          "preco": 47.0,
+          "descricao": "Frango salteado com pimentões e castanhas.",
+          "tags": ["picante", "sem gluten"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Wrap de frango com abacate",
+          "preco": 48.0,
+          "descricao": "Tortilla recheada com frango, abacate e alface.",
+          "tags": [],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Peito de frango ao molho de laranja",
+          "preco": 49.0,
+          "descricao": "Frango grelhado com molho cítrico e gergelim.",
+          "tags": [],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Escondidinho de frango com batata doce",
+          "preco": 51.0,
+          "descricao": "Purê de batata doce e frango desfiado.",
+          "tags": [],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Frango ao molho mostarda",
+          "preco": 52.0,
+          "descricao": "Peito de frango com molho de mostarda e mel.",
+          "tags": ["sem lactose"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Strogonoff de frango sem lactose",
+          "preco": 53.0,
+          "descricao": "Frango desfiado ao molho cremoso sem lactose.",
+          "tags": ["sem lactose"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Marmita fitness de frango e brócolis",
+          "preco": 53.0,
+          "descricao": "Peito de frango, brócolis e arroz integral.",
+          "tags": [],
+          "popularity": 0.5
+        }
+      ],
+      "message": "Encontrei 10 prato(s) incrível(is) para você! Confira nosso catálogo selecionado com carinho:"
+    }
+    ```
+- 3 new item(s)
+- 2 raw response(s)
+- 0 input guardrail result(s)
+- 0 output guardrail result(s)
+(See `RunResult` for more details)
+2025-06-17 15:10:31,378 - INFO - Returning 10 recommendations.
+2025-06-17 15:30:11,884 - INFO - Loaded 50 menu items from C:\Users\23.01307-9\Documents\Trela_Final\menu.json
+2025-06-17 15:30:11,889 - INFO - Meal recommender agent initialized successfully.
+2025-06-17 15:30:17,615 - DEBUG - Processing query: Prato vegano até R$40
+2025-06-17 15:30:24,254 - DEBUG - Extracted budget: 40.0 from query: Prato vegano até R$40
+2025-06-17 15:30:24,254 - DEBUG - Filtering menu with: {'query': 'Prato vegano até R$40', 'budget': 40.0, 'tags': ['vegano'], 'keywords': []}
+2025-06-17 15:30:24,254 - DEBUG - Extracted keywords from query: ['prato', 'vegano', 'r$40']
+2025-06-17 15:30:24,254 - DEBUG - Skipping 'Frango apimentado com broto de feijão' (price 45.0 > 40.0)
+2025-06-17 15:30:24,254 - DEBUG - Skipping 'Camarão ao curry apimentado' (price 52.5 > 40.0)
+2025-06-17 15:30:24,254 - DEBUG - Skipping 'Carne de panela apimentada' (price 49.9 > 40.0)
+2025-06-17 15:30:24,254 - DEBUG - Skipping 'Strogonoff de frango sem lactose' (price 53.0 > 40.0)
+2025-06-17 15:30:24,268 - DEBUG - Skipping 'Salmão grelhado' (price 58.0 > 40.0)
+2025-06-17 15:30:24,268 - DEBUG - Skipping 'Peito de frango grelhado com legumes no vapor' (price 42.0 > 40.0)
+2025-06-17 15:30:24,269 - DEBUG - Skipping 'Escondidinho de batata doce com carne' (price 48.0 > 40.0)
+2025-06-17 15:30:24,269 - DEBUG - Skipping 'Lasanha de berinjela sem lactose' (price 55.0 > 40.0)
+2025-06-17 15:30:24,269 - DEBUG - Skipping 'Arroz carreteiro' (price 50.0 > 40.0)
+2025-06-17 15:30:24,269 - DEBUG - Skipping 'Risoto de cogumelos' (price 45.0 > 40.0)
+2025-06-17 15:30:24,269 - DEBUG - Skipping 'Peito de peru ao molho light' (price 54.0 > 40.0)
+2025-06-17 15:30:24,269 - DEBUG - Skipping 'Escondidinho de frango com batata doce' (price 51.0 > 40.0)
+2025-06-17 15:30:24,269 - DEBUG - Skipping 'Tabule com falafel' (price 41.0 > 40.0)
+2025-06-17 15:30:24,270 - DEBUG - Skipping 'Berinjela recheada com carne' (price 46.0 > 40.0)
+2025-06-17 15:30:24,270 - DEBUG - Skipping 'Filé de peixe ao molho de limão' (price 59.0 > 40.0)
+2025-06-17 15:30:24,270 - DEBUG - Skipping 'Wrap de frango com abacate' (price 48.0 > 40.0)
+2025-06-17 15:30:24,270 - DEBUG - Skipping 'Salada de grão-de-bico com atum' (price 44.0 > 40.0)
+2025-06-17 15:30:24,270 - DEBUG - Skipping 'Frango xadrez sem glúten' (price 47.0 > 40.0)
+2025-06-17 15:30:24,270 - DEBUG - Skipping 'Carne de sol com mandioca' (price 53.0 > 40.0)
+2025-06-17 15:30:24,270 - DEBUG - Skipping 'Espetinho de frango com legumes' (price 42.0 > 40.0)
+2025-06-17 15:30:24,271 - DEBUG - Skipping 'Peito de frango ao molho de laranja' (price 49.0 > 40.0)
+2025-06-17 15:30:24,271 - DEBUG - Skipping 'Purê de batata doce com carne seca' (price 50.0 > 40.0)
+2025-06-17 15:30:24,271 - DEBUG - Skipping 'Bowl de poke de salmão' (price 55.0 > 40.0)
+2025-06-17 15:30:24,271 - DEBUG - Skipping 'Bife à rolê' (price 54.0 > 40.0)
+2025-06-17 15:30:24,271 - DEBUG - Skipping 'Frango ao molho mostarda' (price 52.0 > 40.0)
+2025-06-17 15:30:24,271 - DEBUG - Skipping 'Carne de panela com batatas' (price 56.0 > 40.0)
+2025-06-17 15:30:24,271 - DEBUG - Skipping 'Lasanha de espinafre sem lactose' (price 54.0 > 40.0)
+2025-06-17 15:30:24,271 - DEBUG - Skipping 'Marmita fitness de frango e brócolis' (price 53.0 > 40.0)
+2025-06-17 15:30:24,271 - DEBUG - Skipping 'Bife acebolado sem glúten' (price 51.0 > 40.0)
+2025-06-17 15:30:24,271 - DEBUG - Skipping 'Purê de abóbora com carne moída' (price 45.0 > 40.0)
+2025-06-17 15:30:24,271 - DEBUG - Returning 10 recommendations with message: Encontrei 10 prato(s) incrível(is) para você! Opções **veganas** cheias de sabor! Dentro do seu **orçamento de até R$40.00**! Confira nosso catálogo selecionado com carinho: Dica: Combine com nossa sobremesa vegana por apenas R$15!
+2025-06-17 15:30:34,821 - DEBUG - Agent output: RunResult:
+- Last agent: Agent(name="TrelaMealRecommender", ...)
+- Final output (str):
+    ```json
+    {
+      "recommendations": [
+        {
+          "nome": "Panini vegano de legumes",
+          "preco": 38.0,
+          "descricao": "Pão integral recheado com mix de legumes grelhados.",
+          "tags": ["vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Escondidinho de mandioquinha vegano",
+          "preco": 39.5,
+          "descricao": "Purê de mandioquinha e proteína de soja.",
+          "tags": ["vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Panqueca de banana sem açúcar",
+          "preco": 27.0,
+          "descricao": "Panqueca de banana e aveia sem adição de açúcar.",
+          "tags": ["sem açucar", "vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Bowl de açaí sem açúcar",
+          "preco": 28.0,
+          "descricao": "Açaí puro com frutas e granola sem adição de açúcar.",
+          "tags": ["sem açucar", "vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Salada de frutas sem açúcar",
+          "preco": 29.0,
+          "descricao": "Mix de frutas da estação sem adição de açúcar.",
+          "tags": ["sem açucar", "vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Salada de lentilha com tahine",
+          "preco": 32.0,
+          "descricao": "Lentilhas, tomate, pepino e molho de tahine.",
+          "tags": ["vegano", "sem gluten"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Quinoa com grão-de-bico e legumes",
+          "preco": 35.0,
+          "descricao": "Salada quente de quinoa, grão-de-bico, pimentões e cenoura.",
+          "tags": ["vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Espaguete de abobrinha ao pesto",
+          "preco": 36.0,
+          "descricao": "Tiras de abobrinha com molho pesto e nozes.",
+          "tags": ["vegano"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Tacos de jaca desfiada",
+          "preco": 37.0,
+          "descricao": "Tortillas recheadas com jaca temperada e molho apimentado.",
+          "tags": ["vegano", "picante"],
+          "popularity": 0.5
+        },
+        {
+          "nome": "Tofu apimentado com mix de legumes",
+          "preco": 38.0,
+          "descricao": "Cubos de tofu grelhado com mix de legumes e pimenta caiena.",
+          "tags": ["picante", "vegano", "sem lactose"],
+          "popularity": 0.5
+        }
+      ],
+      "message": "Encontrei 10 prato(s) incrível(is) para você! Opções **veganas** cheias de sabor! Dentro do seu **orçamento de até R$40.00**! Confira nosso catálogo selecionado com carinho: Dica: Combine com nossa sobremesa vegana por apenas R$15!"
+    }
+    ```
+- 5 new item(s)
+- 2 raw response(s)
+- 0 input guardrail result(s)
+- 0 output guardrail result(s)
+(See `RunResult` for more details)
+2025-06-17 15:30:34,821 - INFO - Returning 10 recommendations.
