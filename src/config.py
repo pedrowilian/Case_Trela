@@ -19,6 +19,6 @@ class Config:
     def validate(cls) -> None:
         """Validate required configuration settings."""
         if not cls.OPENAI_API_KEY:
-            raise ValueError("OPENAI_API_KEY environment variable is not set.")
+            raise ValueError("OPENAI_API_KEY environment variable is not set. Please set it in a .env file.")
         if not cls.MENU_PATH.exists():
             raise FileNotFoundError(f"Menu file not found at {cls.MENU_PATH}")

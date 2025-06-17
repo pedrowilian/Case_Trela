@@ -8,88 +8,61 @@ Interactive UI: Provides a chat-like interface with quick suggestion buttons.
 Logging: Comprehensive debug logging for development and troubleshooting.
 Modular Design: Organized codebase with separate modules for configuration, utilities, agents, and API routes.
 
-Project Structure
-trela-recommendations/
-├── src/
-│   ├── config.py           # Configuration settings
-│   ├── utils/             # Utility functions
-│   │   ├── menu_loader.py       # Menu loading and validation
-│   │   ├── budget_extractor.py # Budget extraction logic
-│   │   └── logger.py           # Logging configuration
-│   ├── agents/            # Agent definitions and tools
-│   │   ├── meal_recommender.py  # Meal recommendation agent
-│   │   └── tools.py            # Filter and extraction tools
-│   ├── api/               # FastAPI application and routes
-│   │   ├── app.py              # FastAPI app setup
-│   │   └── routes.py          # API endpoints
-│   └── static/            # Static frontend files
-│       └── index.html         # Frontend UI
-├── run.py                # Entry point to run the server
-├── README.md              # Project documentation
-├── requirements.txt            # Dependencies
-└── .gitignore             # Git ignore patterns
-
 Installation
 
-Clone the repository:
-git clone https://github.com/yourusername/trela-recommendations.git
-cd trela-recommendations
+Clone the repository:git clone https://github.com/pedrowilian/Case_Trela.git
+cd Case_Trela
 
 
-Set up a virtual environment:
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+Install dependencies:pip install -r requirements.txt
 
 
-Install dependencies:
-pip install -r requirements.txt
+Set up the OpenAI API key:
+Create a .env file in the project root.
+Add your OpenAI API key (obtain one from OpenAI):OPENAI_API_KEY=your_openai_api_key_here
 
 
-Configure environment variables:
-
-Set OPENAI_API_KEY in your environment or a .env file.
-Update MENU_PATH in src/config.py to point to your menu.json.
+Ensure .env is not committed to version control (it’s excluded by .gitignore).
 
 
-Run the application:
-python run.py
+Ensure menu.json is available at the path specified in src/config.py (default: C:\Users\23.01307-9\Documents\Trela_Final\menu.json). For portability, copy menu.json to the project root and update src/config.py to:MENU_PATH: Path = Path("menu.json")
 
-The API will be available at http://localhost:8000/.
 
+Run the application:python run.py
+
+
+Open http://localhost:8000/ in your browser.
 
 Usage
 
-Access the UI: Open http://localhost:8000/ in your browser to interact with the chat interface.
-API Endpoint: Send POST requests to /recommend with a JSON payload:{
-  "query": "Prato vegano até R$40"
-}
+Enter queries like “Prato vegano até R$40” or “Salada com frango” in the UI.
+The API processes queries via the /recommend endpoint, returning filtered meal recommendations.
 
-
-Example Queries:
-"Prato mais barato"
-"Almoço sem lactose"
-"Prato picante com proteína"
-
-
-
-Dependencies
-See requirements.txt for a complete list. Key dependencies include:
-
-fastapi: API framework
-uvicorn: ASGI server
-fuzzywuzzy: Fuzzy string matching
-pydantic: Data validation
-agents: Custom agent framework (ensure compatibility)
+Project Structure
+Case_Trela/
+├── src/
+│   ├── api/
+│   │   ├── app.py          # FastAPI application setup
+│   │   └── routes.py       # API routes
+│   ├── agents/
+│   │   └── meal_recommender.py  # Meal recommendation agent
+│   ├── utils/
+│   │   ├── menu_loader.py       # Menu loading and validation
+│   │   ├── budget_extractor.py  # Budget extraction logic
+│   │   └── logger.py           # Logging configuration
+│   ├── config.py           # Configuration settings
+│   └── static/
+│       ├── index.html      # Frontend UI
+│       └── assets/         # CSS, JS, and other static files
+├── .env                    # Environment variables (not tracked)
+├── .gitignore              # Git ignore rules
+├── debug.log               # Debug logs (not tracked)
+├── menu.json               # Menu data
+├── requirements.txt        # Python dependencies
+├── run.py                  # Application entry point
+└── README.md               # Project documentation
 
 Contributing
-
-Fork the repository.
-Create a feature branch (git checkout -b feature/your-feature).
-Commit changes (git commit -m "Add your feature").
-Push to the branch (git push origin feature/your-feature).
-Open a Pull Request.
-
+Contributions are welcome! Please submit issues or pull requests on GitHub.
 License
-MIT License. See LICENSE for details.
-Contact
-For issues or questions, please open an issue on GitHub.
+This project is licensed under the MIT License.
